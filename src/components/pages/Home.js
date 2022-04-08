@@ -30,6 +30,7 @@ const Home = () => {
               <th scope="col">Name</th>
               <th scope="col">User Name</th>
               <th scope="col">Email</th>
+              <th scope="col">Position</th>
               <th>Action</th>
             </tr>
           </thead>
