@@ -14,7 +14,7 @@ const Navbar = () => {
           <ul className="navbar-nav mr-auto"></ul>
         </div>
         <button type="button" class="btn btn-danger" Link to="/users/add">
-          Add User</button>
+          Add Najah</button>
         <Link to="/users/add">
           <button>
             add employee
