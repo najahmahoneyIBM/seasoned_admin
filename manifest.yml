@@ -1,0 +1,8 @@
+applications:
+  - name: seasoned-admin
+path: build/
+memory: 128M
+instance: 1
+buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git #latest
+routes:
+  - route: seasonedadmin.mybluemix.net
