@@ -30,7 +30,7 @@ const Home = () => {
               <th scope="col">Name</th>
               <th scope="col">User Name</th>
               <th scope="col">Email</th>
-              <th scope="col">Position</th>
+              <th scope="col">employeeID</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -41,6 +41,8 @@ const Home = () => {
                 <td>{user.name}</td>
                 <td>{user.username}</td>
                 <td>{user.email}</td>
+                <td>{user.role}</td>
+                <td>{user.employeeID}</td>
                 <td>
                   <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}>
                     View

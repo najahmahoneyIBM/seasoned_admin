@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import { useHistory } from "react-router-dom";
+import { Button, Card, Col, Form } from "react-bootstrap";
+
 
 const AddUser = () => {
   let history = useHistory();
@@ -8,11 +10,11 @@ const AddUser = () => {
     name: "",
     username: "",
     email: "",  
-    phone: "",
-    website: ""
+    role: "",
+    employeeID: ""
   });
 
-  const { name, username, email, phone, website } = user;
+  const { name, username, email, role, employeeID } = user;
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -25,7 +27,7 @@ const AddUser = () => {
   return (
     <div className="container">
       <div className="w-75 mx-auto shadow p-5">
-        <h2 className="text-center mb-4">Add A User</h2>
+        <h2 className="text-center mb-4">Add A Employee</h2>
         <form onSubmit={e => onSubmit(e)}>
           <div className="form-group">
             <input
@@ -61,9 +63,9 @@ const AddUser = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Phone Number"
-              name="phone"
-              value={phone}
+              placeholder="Enter the employee role"
+              name="role"
+              value={role}
               onChange={e => onInputChange(e)}
             />
           </div>
@@ -71,9 +73,9 @@ const AddUser = () => {
             <input
               type="text"
               className="form-control form-control-lg"
-              placeholder="Enter Your Website Name"
-              name="website"
-              value={website}
+              placeholder="Enter Your employeeID"
+              name="employeeID"
+              value={employeeID}
               onChange={e => onInputChange(e)}
             />
           </div>
